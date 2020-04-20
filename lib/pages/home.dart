@@ -115,7 +115,7 @@ class Home extends State<MainPage> {
             alignment: Alignment.topCenter,
             child: Container(
               alignment: Alignment.center,
-              height: 50.0,
+              height: 40.0,
               width: double.infinity,
               color: Colors.white,
 //                child: Text('Anything want on top', textAlign: TextAlign.center,),
@@ -130,27 +130,21 @@ class Home extends State<MainPage> {
                 height: 65.0,
                 width: double.infinity,
                 color: Colors.white,
-                child:
-//                Text(
-//                'Anything want on top',
-//                textAlign: TextAlign.center,
-                    Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                child: GridView.count(
+                  primary: false,
+                  padding: const EdgeInsets.all(20),
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  crossAxisCount: 2,
                   children: <Widget>[
-                    Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
-                      Text('Empresa', textAlign: TextAlign.center),
+                     Text('Empresa', textAlign: TextAlign.start),
+                     Text('Unidade', textAlign: TextAlign.start),
                       _dropDownEmpresas(),
-                    ]),
-                    Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
-                      Text('Unidade', textAlign: TextAlign.center),
                       _dropDownUnidades(),
                     ])
-                  ],
                 )
-
-//              ),
-                ),
           ),
+
 
           Align(
             alignment: Alignment.topCenter,
@@ -160,24 +154,19 @@ class Home extends State<MainPage> {
                 width: double.infinity,
                 color: Colors.white,
                 child:
-//                Text(
-//                'Anything want on top',
-//                textAlign: TextAlign.center,
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+               GridView.count(
+                  primary: false,
+                  padding: const EdgeInsets.all(20),
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  crossAxisCount: 1,
                   children: <Widget>[
-                    Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: <Widget>[
-                      Text('Áreas', textAlign: TextAlign.center),
+                      Text('Áreas', textAlign: TextAlign.start),
                       _dropDownAreasContabeis(),
                     ])
-                  ],
-                )
+                    ),
+                ),
 
-//              ),
-            ),
-          ),
 
           Align(
             alignment: Alignment.topCenter,
